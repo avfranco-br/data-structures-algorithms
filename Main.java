@@ -397,7 +397,6 @@ class Main {
       System.out.println("Tree is Empty or Vertex not found!");
     } else {
       System.out.println(" Vertex " + vertex.value + " deleted!");
-      //myBST.stringfy();
     }
 
     myBST.stringfy(); // vertex 20 not being printed after vertex 9 deleted
