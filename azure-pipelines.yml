@@ -24,7 +24,7 @@ steps:
     goals: 'package'
     
 - task: Bash@3
-  condition: succeded();
+  condition: succeeded()
   inputs:
     targetType: 'inline'
     script: |
