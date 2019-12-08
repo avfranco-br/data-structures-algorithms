@@ -1,4 +1,4 @@
-package avfranco-br;
+package avfranco_br;
 
 import java.time.LocalTime;
 import java.util.Random;
