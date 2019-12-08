@@ -13,7 +13,7 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: './src/pom.xml'
+    mavenPomFile: './pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/src/test/java/avfranco-br/TEST-*.xml'
     testRunTitle: './src/test/java/avfranco-br/dsaTest.java'
