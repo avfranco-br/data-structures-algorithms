@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class DataStructuresAlgorithms {
-  public static Main(String[] args) {
+  public static void Main(String[] args) {
     //String[] nemo = {"nemo", "flora", "eva"};
     //findNemo(nemo);
     
