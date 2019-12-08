@@ -1,4 +1,6 @@
-class BinarySearchTree {
+package avfranco_br;
+
+public class BinarySearchTree {
     class Node {
         Node left;
         Node right;
