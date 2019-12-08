@@ -212,11 +212,9 @@ public class DataStructuresAlgorithms {
     System.out.println(myBST.insert(72));
     System.out.println(myBST.insert(74));
     System.out.println(myBST.insert(78));
-    
-
+  
     BinarySearchTree.Node nodeFound = myBST.lookup(20);
     System.out.println(" Value: " + nodeFound.value + " Left: " + nodeFound.left.value + " Right: " + nodeFound.right.value);
-
 
     //REMOVE a vertex
     
