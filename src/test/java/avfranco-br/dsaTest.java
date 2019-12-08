@@ -1,4 +1,4 @@
-package avfranco-br;
+package avfranco_br;
   
 import static org.junit.Assert.assertTrue;
 
