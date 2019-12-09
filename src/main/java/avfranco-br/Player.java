@@ -1,3 +1,5 @@
+package avfranco_br;
+
 public class Player {
   protected String PlayerName;
   protected String PlayerType;
