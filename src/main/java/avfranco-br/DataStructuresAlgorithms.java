@@ -314,7 +314,7 @@ public class DataStructuresAlgorithms {
     myDemoLinkedList.preappend(0);
     myDemoLinkedList.append(40);
     myDemoLinkedList.insert(4, 8);
-    System.out.println(myDemoLinkedList.remove(7).value);
+    myDemoLinkedList.remove(7);
     myDemoLinkedList.showDemoLinkList();
     myDemoLinkedList.reverse();
 
