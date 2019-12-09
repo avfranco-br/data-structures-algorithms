@@ -1,3 +1,5 @@
+package avfranco_br;
+
 import java.util.LinkedList;
 
 public class LinkedListCustom {
