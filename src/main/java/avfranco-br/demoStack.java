@@ -1,3 +1,5 @@
+package avfranco_br;
+
 public class demoStack {
   private class Node {
     int value;
@@ -62,6 +64,7 @@ public class demoStack {
     return this.lenght;
   }
 
+  // Traverse the stack and print each node
   public void showStack() {
     Node nodeItems;
     nodeItems = this.top;
