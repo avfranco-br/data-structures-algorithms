@@ -58,8 +58,7 @@ public class DataStructuresAlgorithms {
   // Readable code always - variable names, function names etc.
   // Can this code be improved? Replace for by for each structure
   // Modular & Clean code - small bits and pieces
-  private static boolean findEqualEntriesOnArray(String[] array1, String[] array2){
-    
+  private static boolean findEqualEntriesOnArray(String[] array1, String[] array2) {  
     // Nested Arrays - O(n^2) - time consuming once arrays get bigger
     // Space Complexity - O(1) - no new variable created, only the function
     /*
@@ -184,7 +183,7 @@ public class DataStructuresAlgorithms {
     String[] nemo = {"nemo", "flora", "eva"};
     findNemo(nemo);
     
-    //Random randomInts = new Random();
+    Random randomInts = new Random();
     int[] arrayOfNumbers = randomInts.ints(5,0,5).toArray();
     
     findNumber(arrayOfNumbers, 8);
@@ -202,7 +201,6 @@ public class DataStructuresAlgorithms {
     else {
       System.out.println("Not found!");
     }
-
     
     //Google Interview Example
     int[] ArrayOfNumbers = {1,2,3,4,4};
@@ -211,6 +209,7 @@ public class DataStructuresAlgorithms {
     }
     else {
       System.out.println ("Pairs of Sum NOT FOUND!");
+    } 
 
     // Try different Array TryArrayOperations
     ArrayList<Integer> ArrayOfNumbers = new ArrayList<Integer>();
