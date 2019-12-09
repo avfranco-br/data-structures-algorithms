@@ -304,8 +304,7 @@ public class DataStructuresAlgorithms {
     System.out.println(myLinkedList.myLinkedList.getLast());
   
     // DEMO LinkedList / DoubleLinkedList Class
-    
-    demoDoubleLinkedList myDemoLinkedList = new demoDoubleLinkedList(5);
+    // demoDoubleLinkedList myDemoLinkedList = new demoDoubleLinkedList(5);
     demoLinkedList myDemoLinkedList = new demoLinkedList(5);
     myDemoLinkedList.append(10);
     myDemoLinkedList.append(16);
