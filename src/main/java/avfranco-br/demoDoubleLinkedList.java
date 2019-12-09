@@ -1,3 +1,5 @@
+package avfranco_br;
+
 public class demoDoubleLinkedList {
   public class Node {
     int value;
@@ -115,8 +117,7 @@ public demoDoubleLinkedList (int value) {
     return leader;
   }
 
-
-
+  // Traverse Backwards the linked list and print each pointer
   public void printDoubleLinkedList() {
     Node pointer = this.tail;
     while (pointer != null) {
@@ -124,5 +125,4 @@ public demoDoubleLinkedList (int value) {
       pointer = pointer.previous;
     }
   }
-
 }
