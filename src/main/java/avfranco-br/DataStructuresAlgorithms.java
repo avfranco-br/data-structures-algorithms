@@ -9,42 +9,38 @@ import java.util.HashMap;
 
 public class DataStructuresAlgorithms {
   public static void main(String[] args) {
-    //String[] nemo = {"nemo", "flora", "eva"};
-    //findNemo(nemo);
+    String[] nemo = {"nemo", "flora", "eva"};
+    findNemo(nemo);
     
     //Random randomInts = new Random();
-    //int[] arrayOfNumbers = randomInts.ints(5,0,5).toArray();
+    int[] arrayOfNumbers = randomInts.ints(5,0,5).toArray();
     
-    //findNumber(arrayOfNumbers, 8);
+    findNumber(arrayOfNumbers, 8);
 
     //System.out.print("Function started: " + t0.toString() + " and finished at: " + t1.toString() + ". It took in total ...");
-    //int[] ArrayOfNumbers = {1,2,3,4};
-    //sumAllPairsOfArray(arrayOfNumbers);
+    int[] ArrayOfNumbers = {1,2,3,4};
+    sumAllPairsOfArray(arrayOfNumbers);
 
-    //String[] Array1 = {"a", "1", "c", "d", "e"};
-    //String[] Array2 = {"x", "1", "v", "t", "p"};
+    String[] Array1 = {"a", "1", "c", "d", "e"};
+    String[] Array2 = {"x", "1", "v", "t", "p"};
     
-    //if (findEqualEntriesOnArray(Array1, Array2)) {
-    //  System.out.println("Same letter found!");
-   // }
-    //else {
-      //System.out.println("Not found!");
-    //}
+    if (findEqualEntriesOnArray(Array1, Array2)) {
+      System.out.println("Same letter found!");
+    }
+    else {
+      System.out.println("Not found!");
+    }
 
     
     //Google Interview Example
-    /*
     int[] ArrayOfNumbers = {1,2,3,4,4};
     if (hasPairsWithSums(ArrayOfNumbers, 5)) {
       System.out.println ("Pairs of Sum FOUND!");
     }
     else {
       System.out.println ("Pairs of Sum NOT FOUND!");
-    }*/
-    
 
     // Try different Array TryArrayOperations
-    /*
     ArrayList<Integer> ArrayOfNumbers = new ArrayList<Integer>();
     ArrayOfNumbers.add(1);
     ArrayOfNumbers.add(4);
@@ -52,10 +48,8 @@ public class DataStructuresAlgorithms {
     ArrayOfNumbers.add(2);
     ArrayOfNumbers.add(3);
     TryArrayOperations(ArrayOfNumbers);
-    */
 
     // Try Object Reference, Scope, Instanciation
-    /*
     ReferenceContentScope object1 = new ReferenceContentScope(10);
     ReferenceContentScope object2 = object1;
     ReferenceContentScope object3 = new ReferenceContentScope(); 
@@ -69,20 +63,16 @@ public class DataStructuresAlgorithms {
     //Class Instanciation
     Wizard player1 = new Wizard("Alexandre", "Healer");
     player1.Introduce(); player1.Play();
-    */
 
-    //ReverseString myString = new ReverseString("I L GOOGLE");
+    ReverseString myString = new ReverseString("I L GOOGLE");
 
     //Merged sorted arrays
-    /*
     int[] ArrayOfNumbers1 = {0,3,4,31};
     int[] ArrayOfNumbers2 = {3,4,6,30};
 
     MergeSortedArrays MergedSortedArrays = new MergeSortedArrays(ArrayOfNumbers1,ArrayOfNumbers2);
-    */
-
+  
     // My own code o HashTable
-    /*
     HashTable myBucket = new HashTable(10);
 
     myBucket.set("Grapes", 100);
@@ -91,16 +81,15 @@ public class DataStructuresAlgorithms {
 
     System.out.print(myBucket.get("Apples"));
     myBucket.keys();
-    */
-
+  
     // FirstRecurring Character using my own HashTable class
-    //int[] ArrayOfNumbers1 = {1,4,4,1,3,6,0,9,2};
+    int[] ArrayOfNumbers1 = {1,4,4,1,3,6,0,9,2};
     
-    //FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers1);
-    //lookForRecurringCharacter.mapOfRecurringCharacters.keys();
+    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers1);
+    lookForRecurringCharacter.mapOfRecurringCharacters.keys();
 
     //Using Java HashMapMap
-    /*HashMap map = new HashMap<Integer, Integer>();
+    HashMap map = new HashMap<Integer, Integer>();
     boolean recurringEntryFound = false;
     for (int i = 0; i < ArrayOfNumbers1.length; i++) {
       //System.out.println(map.get(i));
@@ -125,10 +114,8 @@ public class DataStructuresAlgorithms {
     } else {  
       System.out.println("NO Recurring Entries found!");
     }
-    */
-
+  
     // JAVA LinkedList Class 
-    /*
     LinkedListCustom myLinkedList = new LinkedListCustom();
     myLinkedList.addItemLinkedList(10, 0);
     myLinkedList.addItemLinkedList(20, 1);
@@ -144,12 +131,11 @@ public class DataStructuresAlgorithms {
     System.out.println(myLinkedList.myLinkedList.peek());
     System.out.println(myLinkedList.myLinkedList.peekFirst());
     System.out.println(myLinkedList.myLinkedList.getLast());
-    */
-
+  
     // DEMO LinkedList / DoubleLinkedList Class
     
-    //demoDoubleLinkedList myDemoLinkedList = new demoDoubleLinkedList(5);
-    /*demoLinkedList myDemoLinkedList = new demoLinkedList(5);
+    demoDoubleLinkedList myDemoLinkedList = new demoDoubleLinkedList(5);
+    demoLinkedList myDemoLinkedList = new demoLinkedList(5);
     myDemoLinkedList.append(10);
     myDemoLinkedList.append(16);
     myDemoLinkedList.append(20);
@@ -158,12 +144,11 @@ public class DataStructuresAlgorithms {
     myDemoLinkedList.preappend(0);
     myDemoLinkedList.append(40);
     myDemoLinkedList.insert(4, 8);
-    //System.out.println(myDemoLinkedList.remove(7).value);
+    System.out.println(myDemoLinkedList.remove(7).value);
     myDemoLinkedList.showDemoLinkList();
-    myDemoLinkedList.reverse(); */
+    myDemoLinkedList.reverse();
 
     // DEMO Stack Class
-    /*
     demoStack myStack = new demoStack();
     myStack.push(10);
     myStack.push(20);
@@ -172,52 +157,50 @@ public class DataStructuresAlgorithms {
     myStack.push(40);
     myStack.pop();
     System.out.println(" Top of stack: " + myStack.peek());
-    myStack.showStack();*/
+    myStack.showStack();
 
     // DEMO Queue using Stack
-    /*queueStack myQueue = new queueStack();
+    queueStack myQueue = new queueStack();
     myQueue.push(10);
     myQueue.push(20);
     myQueue.push(30);
     myQueue.push(40);
     myQueue.pop();
-    System.out.println(myQueue.peek());*/
+    System.out.println(myQueue.peek());
 
     // DEMO Stack using Array
-    /*
     arrayStack myArrayStack = new arrayStack("Google");
     myArrayStack.push("BBC");
     System.out.println("Top: " + myArrayStack.peek());
     myArrayStack.push("Udemy");
     myArrayStack.showArrayStack();
     System.out.println("Removed: " + myArrayStack.pop());
-    System.out.println("Top: " + myArrayStack.peek());*/
+    System.out.println("Top: " + myArrayStack.peek());
 
     // DEMO Binary Search Tree
     BinarySearchTree myBST = new BinarySearchTree();
 
-    System.out.println(myBST.insert(9));
-    System.out.println(myBST.insert(4));
-    System.out.println(myBST.insert(1));
-    System.out.println(myBST.insert(6));
-    System.out.println(myBST.insert(20));
-    System.out.println(myBST.insert(15));
-    System.out.println(myBST.insert(170));
-    System.out.println(myBST.insert(70));
-    System.out.println(myBST.insert(181));
-    System.out.println(myBST.insert(69));
-    System.out.println(myBST.insert(75));
-    System.out.println(myBST.insert(73));
-    System.out.println(myBST.insert(81));
-    System.out.println(myBST.insert(72));
-    System.out.println(myBST.insert(74));
-    System.out.println(myBST.insert(78));
+    System.out.println(myBST.insert(9).value);
+    System.out.println(myBST.insert(4).value);
+    System.out.println(myBST.insert(1).value);
+    System.out.println(myBST.insert(6).value);
+    System.out.println(myBST.insert(20).value);
+    System.out.println(myBST.insert(15).value);
+    System.out.println(myBST.insert(170).value);
+    System.out.println(myBST.insert(70).value);
+    System.out.println(myBST.insert(181).value);
+    System.out.println(myBST.insert(69).value);
+    System.out.println(myBST.insert(75).value);
+    System.out.println(myBST.insert(73).value);
+    System.out.println(myBST.insert(81).value);
+    System.out.println(myBST.insert(72).value);
+    System.out.println(myBST.insert(74).value);
+    System.out.println(myBST.insert(78).value);
   
     BinarySearchTree.Node nodeFound = myBST.lookup(20);
     System.out.println(" Value: " + nodeFound.value + " Left: " + nodeFound.left.value + " Right: " + nodeFound.right.value);
 
     //REMOVE a vertex
-    
     BinarySearchTree.Node vertex;
     vertex = myBST.remove(9);
 
@@ -388,7 +371,7 @@ public class DataStructuresAlgorithms {
 
     return false;
   }
-
+    
   public static void TryArrayOperations(ArrayList array) {
     // Show original array
     System.out.println(array.toString());
