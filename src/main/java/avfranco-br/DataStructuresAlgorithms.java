@@ -189,7 +189,7 @@ public class DataStructuresAlgorithms {
     findNumber(arrayOfNumbers, 8);
 
     //System.out.print("Function started: " + t0.toString() + " and finished at: " + t1.toString() + ". It took in total ...");
-    ArrayOfNumbers = {1,2,3,4};
+    arrayOfNumbers = {1,2,3,4};
     sumAllPairsOfArray(arrayOfNumbers);
 
     String[] Array1 = {"a", "1", "c", "d", "e"};
@@ -203,7 +203,7 @@ public class DataStructuresAlgorithms {
     }
     
     //Google Interview Example
-    ArrayOfNumbers = {1,2,3,4,4};
+    int[] ArrayOfNumbers = {1,2,3,4,4};
     if (hasPairsWithSums(ArrayOfNumbers, 5)) {
       System.out.println ("Pairs of Sum FOUND!");
     }
