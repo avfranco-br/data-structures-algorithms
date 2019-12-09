@@ -189,7 +189,7 @@ public class DataStructuresAlgorithms {
     findNumber(arrayOfNumbers, 8);
 
     //System.out.print("Function started: " + t0.toString() + " and finished at: " + t1.toString() + ". It took in total ...");
-    int[] ArrayOfNumbers = {1,2,3,4};
+    ArrayOfNumbers = {1,2,3,4};
     sumAllPairsOfArray(arrayOfNumbers);
 
     String[] Array1 = {"a", "1", "c", "d", "e"};
@@ -203,7 +203,7 @@ public class DataStructuresAlgorithms {
     }
     
     //Google Interview Example
-    int[] ArrayOfNumbers = {1,2,3,4,4};
+    ArrayOfNumbers = {1,2,3,4,4};
     if (hasPairsWithSums(ArrayOfNumbers, 5)) {
       System.out.println ("Pairs of Sum FOUND!");
     }
@@ -212,13 +212,13 @@ public class DataStructuresAlgorithms {
     } 
 
     // Try different Array TryArrayOperations
-    ArrayList<Integer> ArrayOfNumbers = new ArrayList<Integer>();
-    ArrayOfNumbers.add(1);
-    ArrayOfNumbers.add(4);
-    ArrayOfNumbers.add(7);
-    ArrayOfNumbers.add(2);
-    ArrayOfNumbers.add(3);
-    TryArrayOperations(ArrayOfNumbers);
+    ArrayList<Integer> ListOfNumbers = new ArrayList<Integer>();
+    ListOfNumbers.add(1);
+    ListOfNumbers.add(4);
+    ListOfNumbers.add(7);
+    ListOfNumbers.add(2);
+    ListOfNumbers.add(3);
+    TryArrayOperations(ListOfNumbers);
 
     // Try Object Reference, Scope, Instanciation
     ReferenceContentScope object1 = new ReferenceContentScope(10);
@@ -254,34 +254,34 @@ public class DataStructuresAlgorithms {
     myBucket.keys();
   
     // FirstRecurring Character using my own HashTable class
-    int[] ArrayOfNumbers1 = {1,4,4,1,3,6,0,9,2};
+    ArrayOfNumbers = {1,4,4,1,3,6,0,9,2};
     
-    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers1);
+    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers);
     lookForRecurringCharacter.mapOfRecurringCharacters.keys();
 
     //Using Java HashMapMap
     HashMap map = new HashMap<Integer, Integer>();
     boolean recurringEntryFound = false;
-    for (int i = 0; i < ArrayOfNumbers1.length; i++) {
+    for (int i = 0; i < ArrayOfNumbers.length; i++) {
       //System.out.println(map.get(i));
-      if (map.get(ArrayOfNumbers1[i]) != null) {
-        System.out.println(ArrayOfNumbers1[i]);
+      if (map.get(ArrayOfNumbers[i]) != null) {
+        System.out.println(ArrayOfNumbers[i]);
         recurringEntryFound = true;
         break;
       }
       else {
         //System.out.println(ArrayOfNumbers1[i] + "," + i);
-        map.put(ArrayOfNumbers1[i],i);  
+        map.put(ArrayOfNumbers[i],i);  
       }
     }
     
     // Using Java HashMap
     FirstRecurrencyEntry firstRecurrencyEntry = new FirstRecurrencyEntry();
 
-    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers1);
+    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers);
 
     if (recurrencyEntry != -1) {
-      System.out.println(ArrayOfNumbers1[recurrencyEntry]);
+      System.out.println(ArrayOfNumbers[recurrencyEntry]);
     } else {  
       System.out.println("NO Recurring Entries found!");
     }
