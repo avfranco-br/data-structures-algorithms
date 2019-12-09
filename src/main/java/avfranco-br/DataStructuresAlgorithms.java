@@ -254,34 +254,34 @@ public class DataStructuresAlgorithms {
     myBucket.keys();
   
     // FirstRecurring Character using my own HashTable class
-    int[] ArrayOfNumbers2 = {1,4,4,1,3,6,0,9,2};
+    int[] ArrayOfNumbers3 = {1,4,4,1,3,6,0,9,2};
     
-    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers2);
+    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers3);
     lookForRecurringCharacter.mapOfRecurringCharacters.keys();
 
     //Using Java HashMapMap
     HashMap map = new HashMap<Integer, Integer>();
     boolean recurringEntryFound = false;
-    for (int i = 0; i < ArrayOfNumbers2.length; i++) {
+    for (int i = 0; i < ArrayOfNumbers3.length; i++) {
       //System.out.println(map.get(i));
-      if (map.get(ArrayOfNumbers2[i]) != null) {
-        System.out.println(ArrayOfNumbers2[i]);
+      if (map.get(ArrayOfNumbers3[i]) != null) {
+        System.out.println(ArrayOfNumbers3[i]);
         recurringEntryFound = true;
         break;
       }
       else {
-        //System.out.println(ArrayOfNumbers2[i] + "," + i);
-        map.put(ArrayOfNumbers2[i],i);  
+        System.out.println(ArrayOfNumbers3[i] + "," + i);
+        map.put(ArrayOfNumbers3[i],i);  
       }
     }
     
     // Using Java HashMap
     FirstRecurrencyEntry firstRecurrencyEntry = new FirstRecurrencyEntry();
 
-    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers2);
+    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers3);
 
     if (recurrencyEntry != -1) {
-      System.out.println(ArrayOfNumbers[recurrencyEntry]);
+      System.out.println(ArrayOfNumbers3[recurrencyEntry]);
     } else {  
       System.out.println("NO Recurring Entries found!");
     }
