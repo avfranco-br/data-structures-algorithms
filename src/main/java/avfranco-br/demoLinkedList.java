@@ -1,3 +1,5 @@
+package avfranco_br;
+
 public class demoLinkedList {
   private class nodeLinkedList {
     int value;
@@ -143,6 +145,7 @@ public class demoLinkedList {
     showDemoLinkList();
   }
 
+  // Traverse forward the Linked List and print each pointer
   public void showDemoLinkList() {
     nodeLinkedList nodeItems;
 
