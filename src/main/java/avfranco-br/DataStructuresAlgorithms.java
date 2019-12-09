@@ -189,8 +189,8 @@ public class DataStructuresAlgorithms {
     findNumber(arrayOfNumbers, 8);
 
     //System.out.print("Function started: " + t0.toString() + " and finished at: " + t1.toString() + ". It took in total ...");
-    arrayOfNumbers = {1,2,3,4};
-    sumAllPairsOfArray(arrayOfNumbers);
+    int[] arrayOfInts = {1,2,3,4};
+    sumAllPairsOfArray(arrayOfInts);
 
     String[] Array1 = {"a", "1", "c", "d", "e"};
     String[] Array2 = {"x", "1", "v", "t", "p"};
@@ -254,31 +254,31 @@ public class DataStructuresAlgorithms {
     myBucket.keys();
   
     // FirstRecurring Character using my own HashTable class
-    ArrayOfNumbers = {1,4,4,1,3,6,0,9,2};
+    int[] ArrayOfNumbers2 = {1,4,4,1,3,6,0,9,2};
     
-    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers);
+    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers2);
     lookForRecurringCharacter.mapOfRecurringCharacters.keys();
 
     //Using Java HashMapMap
     HashMap map = new HashMap<Integer, Integer>();
     boolean recurringEntryFound = false;
-    for (int i = 0; i < ArrayOfNumbers.length; i++) {
+    for (int i = 0; i < ArrayOfNumbers2.length; i++) {
       //System.out.println(map.get(i));
-      if (map.get(ArrayOfNumbers[i]) != null) {
-        System.out.println(ArrayOfNumbers[i]);
+      if (map.get(ArrayOfNumbers2[i]) != null) {
+        System.out.println(ArrayOfNumbers2[i]);
         recurringEntryFound = true;
         break;
       }
       else {
-        //System.out.println(ArrayOfNumbers1[i] + "," + i);
-        map.put(ArrayOfNumbers[i],i);  
+        //System.out.println(ArrayOfNumbers2[i] + "," + i);
+        map.put(ArrayOfNumbers2[i],i);  
       }
     }
     
     // Using Java HashMap
     FirstRecurrencyEntry firstRecurrencyEntry = new FirstRecurrencyEntry();
 
-    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers);
+    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers2);
 
     if (recurrencyEntry != -1) {
       System.out.println(ArrayOfNumbers[recurrencyEntry]);
