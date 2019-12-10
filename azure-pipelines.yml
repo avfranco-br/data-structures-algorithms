@@ -30,14 +30,5 @@ steps:
     script: |
       # Write your commands here
       echo 'Display DSA BST output'
-      java -cp target/data-structures-algorithms-0.1-SNAPSHOT.jar avfranco_br.DataStructuresAlgorithms 
-
-- task: GitHubRelease@1
-  inputs:
-    gitHubConnection: avfranco-br
-    repositoryName: '$(Build.Repository.Name)'
-    action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
+      java -cp target/data-structures-algorithms-0.1-SNAPSHOT.jar avfranco_br.DataStructuresAlgorithms
+ 
