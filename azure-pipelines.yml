@@ -34,7 +34,7 @@ steps:
 
 - task: GitHubRelease@1
   inputs:
-    #gitHubConnection: $(git_token)
+    gitHubConnection: '577a416db8c2e3ad0e22510196777609c5a22a6f'
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
