@@ -9,12 +9,12 @@ class queueStack {
 
     /** Initialize your data structure here. */
     public queueStack() { 
-      stack = new Stack();
-      stackReversed = new Stack(); 
+      stack = new Stack<Integer>();
+      stackReversed = new Stack<Integer>(); 
     }
     
     /** Push element x to the back of queue. */
-    public void push(int x) {
+    public void push(final int x) {
         stack.push(x);
     }
     

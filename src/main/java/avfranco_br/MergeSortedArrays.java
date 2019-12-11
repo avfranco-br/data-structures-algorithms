@@ -1,10 +1,10 @@
 package avfranco_br;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Collections;
-import java.util.stream.Collectors;
+// import java.util.Arrays;
+// import java.util.List;
+// import java.util.Collections;
+// import java.util.stream.Collectors;
 
 public class MergeSortedArrays {
   // Array1 [0,3,4,7,31] Array2[4,6,30]

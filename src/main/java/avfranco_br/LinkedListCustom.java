@@ -8,7 +8,7 @@ public class LinkedListCustom {
   
   // Construct an empty linked list
   public LinkedListCustom() {
-    myLinkedList = new LinkedList();
+    myLinkedList = new LinkedList<Integer>();
   }
 
   // Add a new item at Head, Tail, 

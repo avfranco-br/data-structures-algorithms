@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- '*'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -31,4 +32,4 @@ steps:
       # Write your commands here
       echo 'Display DSA BST output'
       java -cp target/data-structures-algorithms-0.1-SNAPSHOT.jar avfranco_br.DataStructuresAlgorithms
- 
+      

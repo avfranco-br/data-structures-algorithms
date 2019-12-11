@@ -1,7 +1,7 @@
 package avfranco_br;
 
 import java.util.ArrayList;
-import java.util.List;
+// import java.util.List;
 
 public class HashTable {
   // Create a new HashMap function, set and get data
@@ -20,9 +20,10 @@ public class HashTable {
     ArrayList <BucketDataStructure> shelfitem;
     //BucketDataStructure shelfitem;
 
+    /*
     public BucketStructure() {
       shelfitem = new ArrayList<BucketDataStructure>();
-    }
+    } */
 
     public BucketStructure(int sizeArrayList) {
       shelfitem = new ArrayList<BucketDataStructure>(sizeArrayList);

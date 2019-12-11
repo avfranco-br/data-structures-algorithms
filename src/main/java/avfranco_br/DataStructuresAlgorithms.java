@@ -1,9 +1,9 @@
 package avfranco_br;
 
-import java.time.LocalTime;
+// import java.time.LocalTime;
 import java.util.Random;
 import java.util.ArrayList;
-import java.util.Collection;
+// import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 
@@ -29,6 +29,7 @@ public class DataStructuresAlgorithms {
   
   // Log all pairs of array [1,2,3,4,5] - BIG O (n^2)
   // Nested arrays
+  /*
   private static void logAllPairsOfArray(int[] arrayOfNumbers) {
     int sizeArray = arrayOfNumbers.length;
     for (int index=0; index < sizeArray; index++) {
@@ -36,7 +37,7 @@ public class DataStructuresAlgorithms {
           System.out.println(arrayOfNumbers[index] + "," + arrayOfNumbers[index1]);
       }
     }
-  }
+  } */
 
   // Sum all pairs of array [1,2,3,4,5] - BIG O (n^2)
   // Nested arrays
@@ -166,7 +167,7 @@ public class DataStructuresAlgorithms {
     return false;
   }
     
-  private static void TryArrayOperations(ArrayList array) {
+  private static void TryArrayOperations(ArrayList<Integer> array) {
     // Show original array
     System.out.println(array.toString());
     //Add a new item
@@ -236,12 +237,14 @@ public class DataStructuresAlgorithms {
     player1.Introduce(); player1.Play();
 
     ReverseString myString = new ReverseString("I L GOOGLE");
+    System.out.println(" Reversed I L GOOGLE: " + myString);
 
     //Merged sorted arrays
     int[] ArrayOfNumbers1 = {0,3,4,31};
     int[] ArrayOfNumbers2 = {3,4,6,30};
 
     MergeSortedArrays MergedSortedArrays = new MergeSortedArrays(ArrayOfNumbers1,ArrayOfNumbers2);
+    System.out.println(" New merged array: " + MergedSortedArrays.toString());
   
     // My own code o HashTable
     HashTable myBucket = new HashTable(10);
@@ -260,13 +263,14 @@ public class DataStructuresAlgorithms {
     lookForRecurringCharacter.mapOfRecurringCharacters.keys();
 
     //Using Java HashMapMap
-    HashMap map = new HashMap<Integer, Integer>();
-    boolean recurringEntryFound = false;
+    HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
+    //boolean recurringEntryFound = false;
+
     for (int i = 0; i < ArrayOfNumbers3.length; i++) {
       //System.out.println(map.get(i));
       if (map.get(ArrayOfNumbers3[i]) != null) {
         System.out.println(ArrayOfNumbers3[i]);
-        recurringEntryFound = true;
+        // recurringEntryFound = true;
         break;
       }
       else {
