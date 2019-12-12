@@ -76,10 +76,12 @@ public class DataStructuresAlgorithms {
     // Separate below code out and create a new function mapArrayToHashMap(arg1)
     HashMap<String,Integer> newArray = new HashMap<String,Integer>();
 
+    Integer keyValue = Integer.valueOf(1);
+
     for (String letra : array1) {
       // Don't need to check if property already exist
       // HashMap.put cares on benhind
-      newArray.put(letra, new Integer(1)); 
+      newArray.put(letra, keyValue); 
     }
     System.out.println(newArray.toString());
 
@@ -160,7 +162,7 @@ public class DataStructuresAlgorithms {
         return true;
       }
       else {
-        ArrayOfComplements.put(new Integer(value), new Integer(1));
+        ArrayOfComplements.put(Integer.valueOf(value), Integer.valueOf(1));
       }
     }
 
