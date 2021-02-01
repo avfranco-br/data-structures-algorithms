@@ -1,15 +1,20 @@
 package avfranco_br;
 
 import java.util.Random;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
 public class DataStructuresAlgorithms {
  private static void findNemo(String[] array) {
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+
     for (int index=0; index < array.length; index++) {
       if (array[index].equalsIgnoreCase("nemo")) {
-        System.out.println("Found NEMO!!!");
+        logger.log(Level.INFO,"Found NEMO!!!");
       }
     }
   }
@@ -17,9 +22,12 @@ public class DataStructuresAlgorithms {
   // BIG O Linear Time function O(n)
   // Not efficient
   private static void findNumber(int[] arrayOfNumbers, int myNumber) {
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+  
     for (int index=0; index < arrayOfNumbers.length; index++) {
       if (arrayOfNumbers[index] == myNumber) {
-        System.out.println("My number " + myNumber + " was found at position " + index);
+        logger.log(Level.INFO,"My number " + myNumber + " was found at position " + index);
       }
     }
   }
@@ -30,9 +38,12 @@ public class DataStructuresAlgorithms {
   // Sum all pairs of array [1,2,3,4,5] - BIG O (n^2)
   // Nested arrays
   private static void sumAllPairsOfArray(int[] arrayOfNumbers) {
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+
     for (int number1 : arrayOfNumbers) {
       for (int number2 : arrayOfNumbers) {
-          System.out.println(number1 + "," + number2 + " = " + (number1+number2));
+          logger.log(Level.INFO,number1 + "," + number2 + " = " + (number1+number2));
       }
     } 
   }
@@ -48,6 +59,9 @@ public class DataStructuresAlgorithms {
   // Can this code be improved? Replace for by for each structure
   // Modular & Clean code - small bits and pieces
   private static boolean findEqualEntriesOnArray(String[] array1, String[] array2) {  
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+
     // Nested Arrays - O(n^2) - time consuming once arrays get bigger
     // Space Complexity - O(1) - no new variable created, only the function
     
@@ -64,7 +78,7 @@ public class DataStructuresAlgorithms {
       // HashMap.put cares on benhind
       newArray.put(letra, keyValue); 
     }
-    System.out.println(newArray.toString());
+    logger.log(Level.INFO,newArray.toString());
 
     // Create a new function CompareTwoArrays(arg1, arg2)
     for (String letra : array2) {
@@ -128,19 +142,26 @@ public class DataStructuresAlgorithms {
   }
     
   private static void tryArrayOperations(ArrayList<Integer> array) {
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+ 
     // Show original array
-    System.out.println(array.toString());
+    logger.log(Level.INFO,array.toString());
     //Add a new item
     array.add(10);
     // Show new array
-    System.out.println(array.toString());
+    logger.log(Level.INFO,array.toString());
     // Sort the Array
     Collections.sort(array);
     // Show Sorted array
-    System.out.println(array.toString());
+    logger.log(Level.INFO,array.toString());
   }
     
   public static void main(String[] args) {
+
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+
     String[] nemo = {"nemo", "flora", "eva"};
     findNemo(nemo);
     
@@ -156,19 +177,19 @@ public class DataStructuresAlgorithms {
     String[] strArray2 = {"x", "1", "v", "t", "p"};
     
     if (findEqualEntriesOnArray(strArray1, strArray2)) {
-      System.out.println("Same letter found!");
+      logger.log(Level.INFO,"Same letter found!");
     }
     else {
-      System.out.println("Not found!");
+      logger.log(Level.INFO,"Not found!");
     }
     
     //Google Interview Example
     int[] arrayNumbers = {1,2,3,4,4};
     if (hasPairsWithSums(arrayNumbers, 5)) {
-      System.out.println ("Pairs of Sum FOUND!");
+      logger.log(Level.INFO,"Pairs of Sum FOUND!");
     }
     else {
-      System.out.println ("Pairs of Sum NOT FOUND!");
+      logger.log(Level.INFO,"Pairs of Sum NOT FOUND!");
     } 
 
     // Try different Array TryArrayOperations
@@ -187,23 +208,23 @@ public class DataStructuresAlgorithms {
     object3.value = object1.value;
     object1.value = 15;
 
-    // System.out.println("Outside constructor " + this); Error - cannot be used in a static context
-    System.out.println(object1.value + "," + object2.value + "," + object3.value);
-    System.out.println(object1==object2);
+    // logger.log(Level.INFO,"Outside constructor " + this); Error - cannot be used in a static context
+    logger.log(Level.INFO,object1.value + "," + object2.value + "," + object3.value);
+    logger.log(Level.INFO,object1==object2);
 
     //Class Instanciation
     Wizard player1 = new Wizard("Alexandre", "Healer");
     player1.Introduce(); player1.Play();
 
     ReverseString myString = new ReverseString("I L GOOGLE");
-    System.out.println(" Reversed I L GOOGLE: " + myString);
+    logger.log(Level.INFO," Reversed I L GOOGLE: " + myString);
 
     //Merged sorted arrays
     int[] arrayOfNumbers1 = {0,3,4,31};
     int[] arrayOfNumbers2 = {3,4,6,30};
 
     var mergedSortedArrays = new MergeSortedArrays(arrayOfNumbers1,arrayOfNumbers2);
-    System.out.println(" New merged array: " + mergedSortedArrays.toString());
+    logger.log(Level.INFO,"New merged array: " + mergedSortedArrays.toString());
   
     // My own code o HashTable
     HashTable myBucket = new HashTable(10);
@@ -212,7 +233,7 @@ public class DataStructuresAlgorithms {
     myBucket.set("Strawberry", 50);
     myBucket.set("Apples",9);
 
-    System.out.print(myBucket.get("Apples"));
+    logger.log(Level.INFO,myBucket.get("Apples"));
     myBucket.keys();
   
     // FirstRecurring Character using my own HashTable class
@@ -226,11 +247,11 @@ public class DataStructuresAlgorithms {
 
     for (int i = 0; i < arrayNumbers3.length; i++) {
       if (map.get(arrayNumbers3[i]) != null) {
-        System.out.println(arrayNumbers3[i]);
+        logger.log(Level.INFO,arrayNumbers3[i]);
         break;
       }
       else {
-        System.out.println(arrayNumbers3[i] + "," + i);
+        logger.log(Level.INFO,arrayNumbers3[i] + "," + i);
         map.put(arrayNumbers3[i],i);  
       }
     }
@@ -241,9 +262,9 @@ public class DataStructuresAlgorithms {
     int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(arrayNumbers3);
 
     if (recurrencyEntry != -1) {
-      System.out.println(arrayNumbers3[recurrencyEntry]);
+      logger.log(Level.INFO,arrayNumbers3[recurrencyEntry]);
     } else {  
-      System.out.println("NO Recurring Entries found!");
+      logger.log(Level.INFO,"NO Recurring Entries found!");
     }
   
     // JAVA LinkedList Class 
@@ -256,12 +277,12 @@ public class DataStructuresAlgorithms {
     myLinkedList.myLinkedList.offerLast(60);
     myLinkedList.myLinkedList.set(3, 5);
     myLinkedList.printLinkedList();
-    System.out.println("Pick items in the LinkedList");
-    System.out.println(myLinkedList.myLinkedList.element());
-    System.out.println(myLinkedList.myLinkedList.getFirst());
-    System.out.println(myLinkedList.myLinkedList.peek());
-    System.out.println(myLinkedList.myLinkedList.peekFirst());
-    System.out.println(myLinkedList.myLinkedList.getLast());
+    logger.log(Level.INFO,"Pick items in the LinkedList");
+    logger.log(Level.INFO,myLinkedList.myLinkedList.element());
+    logger.log(Level.INFO,myLinkedList.myLinkedList.getFirst());
+    logger.log(Level.INFO,myLinkedList.myLinkedList.peek());
+    logger.log(Level.INFO,myLinkedList.myLinkedList.peekFirst());
+    logger.log(Level.INFO,myLinkedList.myLinkedList.getLast());
   
     // DEMO LinkedList / DoubleLinkedList Class
     demoLinkedList myDemoLinkedList = new demoLinkedList(5);
@@ -285,7 +306,7 @@ public class DataStructuresAlgorithms {
     myStack.pop();
     myStack.push(40);
     myStack.pop();
-    System.out.println(" Top of stack: " + myStack.peek());
+    logger.log(Level.INFO," Top of stack: " + myStack.peek());
     myStack.showStack();
 
     // DEMO Queue using Stack
@@ -295,48 +316,48 @@ public class DataStructuresAlgorithms {
     myQueue.push(30);
     myQueue.push(40);
     myQueue.pop();
-    System.out.println(myQueue.peek());
+    logger.log(Level.INFO,myQueue.peek());
 
     // DEMO Stack using Array
     arrayStack myArrayStack = new arrayStack("Google");
     myArrayStack.push("BBC");
-    System.out.println("Top: " + myArrayStack.peek());
+    logger.log(Level.INFO,"Top: " + myArrayStack.peek());
     myArrayStack.push("Udemy");
     myArrayStack.showArrayStack();
-    System.out.println("Removed: " + myArrayStack.pop());
-    System.out.println("Top: " + myArrayStack.peek());
+    logger.log(Level.INFO,"Removed: " + myArrayStack.pop());
+    logger.log(Level.INFO,"Top: " + myArrayStack.peek());
 
     // DEMO Binary Search Tree
     BinarySearchTree myBST = new BinarySearchTree();
 
-    System.out.println(myBST.insert(9).value);
-    System.out.println(myBST.insert(4).value);
-    System.out.println(myBST.insert(1).value);
-    System.out.println(myBST.insert(6).value);
-    System.out.println(myBST.insert(20).value);
-    System.out.println(myBST.insert(15).value);
-    System.out.println(myBST.insert(170).value);
-    System.out.println(myBST.insert(70).value);
-    System.out.println(myBST.insert(181).value);
-    System.out.println(myBST.insert(69).value);
-    System.out.println(myBST.insert(75).value);
-    System.out.println(myBST.insert(73).value);
-    System.out.println(myBST.insert(81).value);
-    System.out.println(myBST.insert(72).value);
-    System.out.println(myBST.insert(74).value);
-    System.out.println(myBST.insert(78).value);
+    logger.log(Level.INFO,myBST.insert(9).value);
+    logger.log(Level.INFO,myBST.insert(4).value);
+    logger.log(Level.INFO,myBST.insert(1).value);
+    logger.log(Level.INFO,myBST.insert(6).value);
+    logger.log(Level.INFO,myBST.insert(20).value);
+    logger.log(Level.INFO,myBST.insert(15).value);
+    logger.log(Level.INFO,myBST.insert(170).value);
+    logger.log(Level.INFO,myBST.insert(70).value);
+    logger.log(Level.INFO,myBST.insert(181).value);
+    logger.log(Level.INFO,myBST.insert(69).value);
+    logger.log(Level.INFO,myBST.insert(75).value);
+    logger.log(Level.INFO,myBST.insert(73).value);
+    logger.log(Level.INFO,myBST.insert(81).value);
+    logger.log(Level.INFO,myBST.insert(72).value);
+    logger.log(Level.INFO,myBST.insert(74).value);
+    logger.log(Level.INFO,myBST.insert(78).value);
   
     BinarySearchTree.Node nodeFound = myBST.lookup(20);
-    System.out.println(" Value: " + nodeFound.value + " Left: " + nodeFound.left.value + " Right: " + nodeFound.right.value);
+    logger.log(Level.INFO," Value: " + nodeFound.value + " Left: " + nodeFound.left.value + " Right: " + nodeFound.right.value);
 
     //REMOVE a vertex
     BinarySearchTree.Node vertex;
     vertex = myBST.remove(9);
 
     if (vertex == null) {
-      System.out.println("Tree is Empty or Vertex not found!");
+      logger.log(Level.INFO,"Tree is Empty or Vertex not found!");
     } else {
-      System.out.println(" Vertex " + vertex.value + " deleted!");
+      logger.log(Level.INFO," Vertex " + vertex.value + " deleted!");
     }
 
     myBST.stringfy(); // vertex 20 not being printed after vertex 9 deleted

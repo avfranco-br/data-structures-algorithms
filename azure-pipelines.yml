@@ -31,5 +31,5 @@ steps:
     script: |
       # Write your commands here
       echo 'Display DSA BST output'
-      java -cp target/data-structures-algorithms-0.2-SNAPSHOT.jar avfranco_br.DataStructuresAlgorithms
+      java -cp target/data-structures-algorithms-0.3-SNAPSHOT.jar avfranco_br.DataStructuresAlgorithms
       
