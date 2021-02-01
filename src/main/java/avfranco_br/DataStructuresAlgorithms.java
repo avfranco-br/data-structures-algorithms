@@ -1,17 +1,15 @@
 package avfranco_br;
 
-// import java.time.LocalTime;
 import java.util.Random;
 import java.util.ArrayList;
-// import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 
 public class DataStructuresAlgorithms {
  private static void findNemo(String[] array) {
     for (int index=0; index < array.length; index++) {
-      if (array[index] == "nemo") {
-        System.out.print("Found NEMO!!!");
+      if (array[index].equalsIgnoreCase("nemo")) {
+        System.out.println("Found NEMO!!!");
       }
     }
   }
@@ -20,7 +18,6 @@ public class DataStructuresAlgorithms {
   // Not efficient
   private static void findNumber(int[] arrayOfNumbers, int myNumber) {
     for (int index=0; index < arrayOfNumbers.length; index++) {
-      //System.out.println(arrayOfNumbers[index]);
       if (arrayOfNumbers[index] == myNumber) {
         System.out.println("My number " + myNumber + " was found at position " + index);
       }
@@ -29,16 +26,7 @@ public class DataStructuresAlgorithms {
   
   // Log all pairs of array [1,2,3,4,5] - BIG O (n^2)
   // Nested arrays
-  /*
-  private static void logAllPairsOfArray(int[] arrayOfNumbers) {
-    int sizeArray = arrayOfNumbers.length;
-    for (int index=0; index < sizeArray; index++) {
-      for (int index1=0; index1 < sizeArray; index1++) {
-          System.out.println(arrayOfNumbers[index] + "," + arrayOfNumbers[index1]);
-      }
-    }
-  } */
-
+  
   // Sum all pairs of array [1,2,3,4,5] - BIG O (n^2)
   // Nested arrays
   private static void sumAllPairsOfArray(int[] arrayOfNumbers) {
@@ -62,19 +50,12 @@ public class DataStructuresAlgorithms {
   private static boolean findEqualEntriesOnArray(String[] array1, String[] array2) {  
     // Nested Arrays - O(n^2) - time consuming once arrays get bigger
     // Space Complexity - O(1) - no new variable created, only the function
-    /*
-    for (char value1 : array1) {
-      for (char value2 : array2) {
-        if (value1 == value2) return true;
-      }
-    }
-    */
-
+    
     // Time complexity O(array1*array2) - better than O(n^2)
     // Space complexity O(n) - newArray as a copye of Array1 - consume more memory
     // Faster solution but heavier 
     // Separate below code out and create a new function mapArrayToHashMap(arg1)
-    HashMap<String,Integer> newArray = new HashMap<String,Integer>();
+    HashMap<String,Integer> newArray = new HashMap<>();
 
     Integer keyValue = Integer.valueOf(1);
 
@@ -87,7 +68,7 @@ public class DataStructuresAlgorithms {
 
     // Create a new function CompareTwoArrays(arg1, arg2)
     for (String letra : array2) {
-      if (newArray.containsKey(letra) == true) {
+      if (newArray.containsKey(letra)) {
         return true;
       }
     }
@@ -105,71 +86,48 @@ public class DataStructuresAlgorithms {
   // Is there any priority in terms of time or space complexity?
   // Can I sum up each item with itself
   // Can we have duplicated entries?
-  private static boolean hasPairsWithSums(int[] ArrayOfNumbers, int sum) {
+  private static boolean hasPairsWithSums(int[] arrayOfNumbers, int sum) {
     // FIRST Option would a nested loop
       // add to the current value of the outer loop + with the subsequent values until find the desired sum or end of the Array 
       // follow this above steps until outer.length - 2
       // It solves the problem but it's not efficient, time consuming (O^2), mainly in case the array becomes very large
       // ArrayOfNumbers [1,2,3,4,4] = i + (i+1)
-      /* for (int i=0; i < ArrayOfNumbers.length-1; i++) {
-        for (int j=i+1; j < ArrayOfNumbers.length; j++) {
-          System.out.println (ArrayOfNumbers[i] + "," + ArrayOfNumbers[j]);
-          if ((ArrayOfNumbers[i]+ArrayOfNumbers[j]) == sum) {
-            return true;
-          }
-        }
-      } 
-      return false; */
-
+      
     // SECOND Option
       // First loop convert the Array to HashMap where each value as a Key
       // Second loop to look for the complements
       // Same time complexity than the nested loop - O(ArrayOfNumber*newArrayOfNumbers)
       // ArrayOfNumbers [1,2,3,4,4] --> HashMap [1,2,3,4,4]
-      /*
-      HashMap <Integer,Integer>newArrayOfNumbers = new HashMap<Integer,Integer>();
-      for (int value : ArrayOfNumbers) {
-        newArrayOfNumbers.put (new Integer(value),new Integer(1));
-      }
-
-      for (int value: ArrayOfNumbers) {
-        if (value != (sum - value)) {
-          if (newArrayOfNumbers.containsKey(sum-value)) {
-              return true;
-          }
-        }
-      }
-      return false;
-      */
-
+      
     // THIRD Option
-    // ArrayOfNumbers [1,2,3,4,4]
-    // SUM fist + last == sum?
-    // More time complexity efficient - O(n)
-    if ((ArrayOfNumbers[0]+ArrayOfNumbers[ArrayOfNumbers.length-1]) == sum) {
+      // ArrayOfNumbers [1,2,3,4,4]
+      // SUM fist + last == sum?
+      // More time complexity efficient - O(n)
+    
+    if ((arrayOfNumbers[0]+arrayOfNumbers[arrayOfNumbers.length-1]) == sum) {
       return true;
     }
    
     // ArrayOfComplements[7,6,5,4]
-    HashMap <Integer,Integer> ArrayOfComplements = new HashMap<Integer,Integer>();
+    var arrayComplements = new HashMap<Integer, Integer>();
 
     // Walk-through each ArrayOfNumbers elements and look for its complement (sum - value)
-    for (int value : ArrayOfNumbers) {
+    for (int value : arrayOfNumbers) {
       // sum 9
       // value [1,2,3,4,4]
       // ArrayOfComplements [7,6,5,4]
-      if (ArrayOfComplements.containsKey(sum-value)) {
+      if (arrayComplements.containsKey(sum-value)) {
         return true;
       }
       else {
-        ArrayOfComplements.put(Integer.valueOf(value), Integer.valueOf(1));
+        arrayComplements.put(Integer.valueOf(value), Integer.valueOf(1));
       }
     }
 
     return false;
   }
     
-  private static void TryArrayOperations(ArrayList<Integer> array) {
+  private static void tryArrayOperations(ArrayList<Integer> array) {
     // Show original array
     System.out.println(array.toString());
     //Add a new item
@@ -191,14 +149,13 @@ public class DataStructuresAlgorithms {
     
     findNumber(arrayOfNumbers, 8);
 
-    //System.out.print("Function started: " + t0.toString() + " and finished at: " + t1.toString() + ". It took in total ...");
     int[] arrayOfInts = {1,2,3,4};
     sumAllPairsOfArray(arrayOfInts);
 
-    String[] Array1 = {"a", "1", "c", "d", "e"};
-    String[] Array2 = {"x", "1", "v", "t", "p"};
+    String[] strArray1 = {"a", "1", "c", "d", "e"};
+    String[] strArray2 = {"x", "1", "v", "t", "p"};
     
-    if (findEqualEntriesOnArray(Array1, Array2)) {
+    if (findEqualEntriesOnArray(strArray1, strArray2)) {
       System.out.println("Same letter found!");
     }
     else {
@@ -206,8 +163,8 @@ public class DataStructuresAlgorithms {
     }
     
     //Google Interview Example
-    int[] ArrayOfNumbers = {1,2,3,4,4};
-    if (hasPairsWithSums(ArrayOfNumbers, 5)) {
+    int[] arrayNumbers = {1,2,3,4,4};
+    if (hasPairsWithSums(arrayNumbers, 5)) {
       System.out.println ("Pairs of Sum FOUND!");
     }
     else {
@@ -215,13 +172,13 @@ public class DataStructuresAlgorithms {
     } 
 
     // Try different Array TryArrayOperations
-    ArrayList<Integer> ListOfNumbers = new ArrayList<Integer>();
-    ListOfNumbers.add(1);
-    ListOfNumbers.add(4);
-    ListOfNumbers.add(7);
-    ListOfNumbers.add(2);
-    ListOfNumbers.add(3);
-    TryArrayOperations(ListOfNumbers);
+    ArrayList<Integer> listOfNumbers = new ArrayList<>();
+    listOfNumbers.add(1);
+    listOfNumbers.add(4);
+    listOfNumbers.add(7);
+    listOfNumbers.add(2);
+    listOfNumbers.add(3);
+    tryArrayOperations(listOfNumbers);
 
     // Try Object Reference, Scope, Instanciation
     ReferenceContentScope object1 = new ReferenceContentScope(10);
@@ -242,11 +199,11 @@ public class DataStructuresAlgorithms {
     System.out.println(" Reversed I L GOOGLE: " + myString);
 
     //Merged sorted arrays
-    int[] ArrayOfNumbers1 = {0,3,4,31};
-    int[] ArrayOfNumbers2 = {3,4,6,30};
+    int[] arrayOfNumbers1 = {0,3,4,31};
+    int[] arrayOfNumbers2 = {3,4,6,30};
 
-    MergeSortedArrays MergedSortedArrays = new MergeSortedArrays(ArrayOfNumbers1,ArrayOfNumbers2);
-    System.out.println(" New merged array: " + MergedSortedArrays.toString());
+    var mergedSortedArrays = new MergeSortedArrays(arrayOfNumbers1,arrayOfNumbers2);
+    System.out.println(" New merged array: " + mergedSortedArrays.toString());
   
     // My own code o HashTable
     HashTable myBucket = new HashTable(10);
@@ -259,35 +216,32 @@ public class DataStructuresAlgorithms {
     myBucket.keys();
   
     // FirstRecurring Character using my own HashTable class
-    int[] ArrayOfNumbers3 = {1,4,4,1,3,6,0,9,2};
+    int[] arrayNumbers3 = {1,4,4,1,3,6,0,9,2};
     
-    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(ArrayOfNumbers3);
+    FirstRecurringCharacter lookForRecurringCharacter = new FirstRecurringCharacter(arrayNumbers3);
     lookForRecurringCharacter.mapOfRecurringCharacters.keys();
 
     //Using Java HashMapMap
-    HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
-    //boolean recurringEntryFound = false;
+    HashMap<Integer,Integer> map = new HashMap<>();
 
-    for (int i = 0; i < ArrayOfNumbers3.length; i++) {
-      //System.out.println(map.get(i));
-      if (map.get(ArrayOfNumbers3[i]) != null) {
-        System.out.println(ArrayOfNumbers3[i]);
-        // recurringEntryFound = true;
+    for (int i = 0; i < arrayNumbers3.length; i++) {
+      if (map.get(arrayNumbers3[i]) != null) {
+        System.out.println(arrayNumbers3[i]);
         break;
       }
       else {
-        System.out.println(ArrayOfNumbers3[i] + "," + i);
-        map.put(ArrayOfNumbers3[i],i);  
+        System.out.println(arrayNumbers3[i] + "," + i);
+        map.put(arrayNumbers3[i],i);  
       }
     }
     
     // Using Java HashMap
-    FirstRecurrencyEntry firstRecurrencyEntry = new FirstRecurrencyEntry();
+    var firstRecurrencyEntry = new FirstRecurrencyEntry();
 
-    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(ArrayOfNumbers3);
+    int recurrencyEntry = firstRecurrencyEntry.findFirstRecurrencyEntry(arrayNumbers3);
 
     if (recurrencyEntry != -1) {
-      System.out.println(ArrayOfNumbers3[recurrencyEntry]);
+      System.out.println(arrayNumbers3[recurrencyEntry]);
     } else {  
       System.out.println("NO Recurring Entries found!");
     }
@@ -310,7 +264,6 @@ public class DataStructuresAlgorithms {
     System.out.println(myLinkedList.myLinkedList.getLast());
   
     // DEMO LinkedList / DoubleLinkedList Class
-    // demoDoubleLinkedList myDemoLinkedList = new demoDoubleLinkedList(5);
     demoLinkedList myDemoLinkedList = new demoLinkedList(5);
     myDemoLinkedList.append(10);
     myDemoLinkedList.append(16);
