@@ -36,6 +36,8 @@
           <fork>true</fork>
           <executable>${JAVA_HOME_11_X64}/bin/javac</executable>
           <compilerVersion>11</compilerVersion>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
   </plugins>
