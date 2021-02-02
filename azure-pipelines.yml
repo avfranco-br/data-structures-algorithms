@@ -17,8 +17,9 @@ steps:
     script: |
       # Write your commands here
       echo $JAVA_HOME
-      echo java -version
-      echo mvn --version
+      echo $(jdk_version)
+      java -version
+      mvn --version
 
 - task: Maven@3
   inputs:
