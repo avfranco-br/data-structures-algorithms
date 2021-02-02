@@ -17,6 +17,7 @@ steps:
     script: |
       # Write your commands here
       echo $JAVA_HOME
+      echo $JAVA_HOME_11_X64
       echo $(jdk_version)
       java -version
       mvn --version
