@@ -28,7 +28,7 @@ steps:
     testResultsFiles: '**/src/test/java/avfranco_br/TEST-*.xml'
     testRunTitle: './src/test/java/avfranco_br/dsaTest.java'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
