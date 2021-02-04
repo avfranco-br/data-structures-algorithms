@@ -6,7 +6,7 @@
 
   <groupId>avfranco_br</groupId>
   <artifactId>data-structures-algorithms</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.4-SNAPSHOT</version>
 
   <name>data-structures-algorithms</name>
   <!-- FIXME change it to the project's website -->
@@ -24,9 +24,9 @@
           <version>3.8.1</version>
           <configuration>
             <executable>${JAVA_HOME_11_X64}/bin/javac</executable>
-            <compilerVersion>11</compilerVersion>
-            <source>11</source>
-            <target>11</target>
+            <compilerVersion>15</compilerVersion>
+            <source>15</source>
+            <target>15</target>
           </configuration>
         </plugin>
         <plugin>
