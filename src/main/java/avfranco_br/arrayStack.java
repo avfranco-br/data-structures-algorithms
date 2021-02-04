@@ -1,15 +1,17 @@
 package avfranco_br;
 
-// import java.awt.event.ItemEvent;
 import java.util.ArrayList;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 
-public class arrayStack {
+
+public class ArrayStack {
   ArrayList<String> arrayOfItems;
   String top;
   int length = 0;
 
-  public arrayStack(String value) {
-    arrayOfItems = new ArrayList<String>();
+  public ArrayStack() {
+    arrayOfItems = new ArrayList<>();
     top = null;
     length=0;
   }
@@ -37,8 +39,10 @@ public class arrayStack {
   }
 
   public void showArrayStack() {
+  Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+ 
     for (String item: arrayOfItems) {
-      System.out.println (item);
+        logger.log(Level.INFO,item);
     }
   }
 }
