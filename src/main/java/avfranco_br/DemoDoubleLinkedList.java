@@ -1,6 +1,9 @@
 package avfranco_br;
 
-public class demoDoubleLinkedList {
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+
+public class DemoDoubleLinkedList {
   public class Node {
     int value;
     Node previous;
@@ -10,16 +13,13 @@ public class demoDoubleLinkedList {
   private Node tail;
   private int size=0;
 
-public demoDoubleLinkedList (int value) {
+public DemoDoubleLinkedList (int value) {
   this.head = createNode(value);
   this.tail = this.head;
   }
   
  public boolean isEmpty() {
-   if (this.size == 0) return true;
-   
-   return false;
-  
+   return (this.size == 0);
  }
 
  private Node createNode(int value) {
@@ -119,9 +119,12 @@ public demoDoubleLinkedList (int value) {
 
   // Traverse Backwards the linked list and print each pointer
   public void printDoubleLinkedList() {
+    // Create a Logger 
+    Logger logger = System.getLogger(DataStructuresAlgorithms.class.getName()); 
+
     Node pointer = this.tail;
     while (pointer != null) {
-      System.out.println(" Node: " + pointer.value);
+      logger.log(Level.INFO, () -> " Node: " + this.tail.value);
       pointer = pointer.previous;
     }
   }
