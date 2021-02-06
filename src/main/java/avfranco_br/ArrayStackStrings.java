@@ -5,12 +5,12 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 
 
-public class ArrayStack {
+public class ArrayStackofStrings {
   ArrayList<String> arrayOfItems;
   String top;
   int length = 0;
 
-  public ArrayStack() {
+  public ArrayStackofStrings() {
     arrayOfItems = new ArrayList<>();
     top = null;
     length=0;
