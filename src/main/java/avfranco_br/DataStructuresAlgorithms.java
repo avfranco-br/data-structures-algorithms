@@ -319,7 +319,7 @@ public class DataStructuresAlgorithms {
     logger.log(Level.INFO,myQueue.peek());
 
     // DEMO Stack using Array
-    ArrayStack myArrayStack = new ArrayStack();
+    ArrayStackStrings myArrayStack = new ArrayStackStrings();
     myArrayStack.push("BBC");
     logger.log(Level.INFO,"Top: " + myArrayStack.peek());
     myArrayStack.push("Udemy");
