@@ -19,7 +19,7 @@ public class ArrayStack {
   public String pop() {
     if (arrayOfItems.isEmpty()) return null;    
     length--;
-    String deletedItem = arrayOfItems.remove(length);
+    var deletedItem = arrayOfItems.remove(length);
     if (length > 0) {
       top = arrayOfItems.get(length-1);
     } else {
